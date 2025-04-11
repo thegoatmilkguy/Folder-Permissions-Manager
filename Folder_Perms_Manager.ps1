@@ -39,7 +39,30 @@ while ($menuloop) {
 
     Switch ($selection) {
         1 {
-
+            #list permissions for $folder
+        }
+        2 {
+            #Add a user to the read only group for $folder
+        }
+        3 {
+            #Add a usuer to the modify group for $folder
+        }
+        4 {
+            #Remove a user from the read only group for $folder
+        }
+        5 {
+            #Remove a user from the modify group for $folder
+        }
+        6 {
+            $folder = Get-ValidFolderPath
+        }
+        7 {
+            Write-Host "`nBuhbye now!  Buhbye"
+            $menuloop = $false
+            break
+        }
+        default {
+            Write-Host "Invalid selection.  Please try again."
         }
     }
 }
